@@ -12,12 +12,20 @@ output: github_document
 美國職棒大聯盟(MLB)是全世界最高的棒球殿堂，創立於1903年，在台灣成績較優秀的選手通常都會被MLB的球團賞識。MLB總共有30支隊伍，有29支來自美國各地，有1支來自加拿大，並且分為美聯以及國聯，隊伍名稱有奪冠最多次的紐約洋基、邁阿密馬林魚、波士頓紅襪、和2016年冠軍隊芝加哥小熊等等。目前旅美的台灣選手陳偉殷效力於邁阿密馬林魚隊擔任投手，並且是第4號先發，是我們台灣之光。
 
 
-
 ##**動機**
 ***
 
 我們組員本身就對棒球有相當大的興趣，因此對於MLB也有一些了解，所以想要藉此機會來分析MLB各個隊伍的成績，也讓大家知道美國球類運動是多麼盛行。
 
+
+##**格式**
+***
+兩個資料都為excel檔
+```{r}
+library(readxl)
+mlb_bat <- read_excel("C:/Users/Yuan/Downloads/mlb_bat.xlsx") 
+mlb_pitch <- read_excel("C:/Users/Yuan/Downloads/mlb_pitch.xlsx")  
+```
 
 ##**假設**
 ***
@@ -25,14 +33,9 @@ output: github_document
 2. 投手ERA越低，被安打數越少
 3. 盜壘次數越多，成功次數越多
 
-
-##**格式**
+##**圖表**
 ***
 ```{r echo = FALSE}
-library(readxl)
-mlb_bat <- read_excel("C:/Users/Yuan/Downloads/mlb_bat.xlsx")
-mlb_pitch <- read_excel("C:/Users/Yuan/Downloads/mlb_pitch.xlsx")
-
 mlb_pitch$W<-as.numeric(mlb_pitch$W) 
 mlb_pitch$L<-as.numeric(mlb_pitch$L) 
 mlb_pitch$wingames<-mlb_pitch$W-mlb_pitch$L 

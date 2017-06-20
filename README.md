@@ -16,6 +16,24 @@
 
 我們組員本身就對棒球有相當大的興趣，因此對於MLB也有一些了解，所以想要藉此機會來分析MLB各個隊伍的成績，也讓大家知道美國球類運動是多麼盛行。
 
+**格式**
+--------
+
+------------------------------------------------------------------------
+
+兩個資料都為excel檔
+
+``` r
+library(readxl)
+```
+
+    ## Warning: package 'readxl' was built under R version 3.3.3
+
+``` r
+mlb_bat <- read_excel("C:/Users/Yuan/Downloads/mlb_bat.xlsx") 
+mlb_pitch <- read_excel("C:/Users/Yuan/Downloads/mlb_pitch.xlsx")  
+```
+
 **假設**
 --------
 
@@ -25,12 +43,10 @@
 2.  投手ERA越低，被安打數越少
 3.  盜壘次數越多，成功次數越多
 
-**格式**
+**圖表**
 --------
 
 ------------------------------------------------------------------------
-
-    ## Warning: package 'readxl' was built under R version 3.3.3
 
 | Tm  |  wingames|
 |:----|---------:|
@@ -47,15 +63,15 @@
 
     ## Warning: package 'ggplot2' was built under R version 3.3.3
 
-![](README_files/figure-markdown_github/unnamed-chunk-1-1.png)
-
 ![](README_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 ![](README_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
+![](README_files/figure-markdown_github/unnamed-chunk-4-1.png)
+
     ## Warning: package 'treemap' was built under R version 3.3.3
 
-![](README_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](README_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
 **結果**
 --------
